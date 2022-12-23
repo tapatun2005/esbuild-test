@@ -1,5 +1,5 @@
 // src/js/Components/_Default.js
-var imports = { "./Components/Component.js": "./mX904/Component.js", "./Components/Component2.js": "./mX904/Component2.js" };
+var imports = { "./Components/Component.js": "./V3i3D/Component.js", "./Components/Component2.js": "./V3i3D/Component2.js" };
 var components = document.querySelectorAll("[data-component]");
 for (let i = 0; i < components.length; i++) {
   const el = components[i];

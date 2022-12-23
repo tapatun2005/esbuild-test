@@ -1,9 +1,11 @@
-import path from 'path'
 import fs from 'fs'
 import esbuild from 'esbuild'
+import {sassPlugin} from 'esbuild-sass-plugin'
 
 // Helper
 import { $hash } from './_helpers/hash.js'
+
+let output = null
 
 const dynamicImportsPlugin = {
     name: 'dymanicImportsPlugin',
@@ -57,7 +59,9 @@ const dynamicImportsPlugin = {
             entryNames = `${hash}/[name]`
             outdir = outdir
             chunkNames = '[name]'
-            plugins = []
+            plugins = [
+                sassPlugin()
+            ]
 
             const options = {
                 ...initialOptions,
@@ -67,7 +71,7 @@ const dynamicImportsPlugin = {
                 plugins
             }
 
-            const output = await esbuild.build(options)
+            output = await esbuild.build(options)
         })
     }
 }

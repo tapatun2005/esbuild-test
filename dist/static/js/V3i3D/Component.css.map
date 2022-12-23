@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/css/layout/_main.scss"],
+  "sourcesContent": ["body {\n    background: orange;\n}"],
+  "mappings": ";AAAA;AACI;;",
+  "names": []
+}
