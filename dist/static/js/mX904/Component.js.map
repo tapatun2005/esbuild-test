@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/js/Components/Component.js"],
+  "sourcesContent": ["import { $selector } from \"../Helpers/selector\"\n\nconst Component = (el) => {\n    el.innerHTML = 'COMPONENT'\n    $selector(el)\n}\n\nexport default Component"],
+  "mappings": ";;;;;AAEA,IAAM,YAAY,CAAC,OAAO;AACtB,KAAG,YAAY;AACf,YAAU,EAAE;AAChB;AAEA,IAAO,oBAAQ;",
+  "names": []
+}

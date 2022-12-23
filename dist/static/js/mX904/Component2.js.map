@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/js/Components/Component2.js"],
+  "sourcesContent": ["import { $selector } from \"../Helpers/selector\"\n\nconst Component = (el) => {\n    console.log('hello')\n}\n\nexport default Component"],
+  "mappings": ";;;AAEA,IAAM,YAAY,CAAC,OAAO;AACtB,UAAQ,IAAI,OAAO;AACvB;AAEA,IAAO,qBAAQ;",
+  "names": []
+}

@@ -1,0 +1,26 @@
+{
+  "name": "esbuild",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "node _app",
+    "build": "node _app --production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "node _app/clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "chokidar": "^3.5.3",
+    "del": "^7.0.0",
+    "esbuild": "^0.16.10",
+    "esbuild-sass-plugin": "^2.4.4",
+    "handlebars": "^4.7.7",
+    "live-server": "^1.2.2",
+    "path": "^0.12.7",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4"
+  }
+}
