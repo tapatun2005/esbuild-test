@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/js/Helpers/selector.js"],
-  "sourcesContent": ["export const $selector = (el) => {\n    console.log('selectorss')\n    return 'selector'\n}"],
-  "mappings": ";AAAO,IAAM,YAAY,CAAC,OAAO;AAC7B,UAAQ,IAAI,YAAY;AACxB,SAAO;AACX;",
-  "names": []
-}

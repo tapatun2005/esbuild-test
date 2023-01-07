@@ -1,3 +1,5 @@
+import CONFIGS from '../config.js'
+
 import esbuild from 'esbuild'
 import fs from 'fs'
 import path from 'path'
@@ -83,7 +85,6 @@ const run = async () => {
     let cleaned = await clean()
     if (cleaned) {   
         const isBuild = await build()
-        console.log(isBuild)
         if (isDev && isBuild) {
             server()
         } else if (isBuild && !isDev) {
@@ -93,6 +94,50 @@ const run = async () => {
     }
 }
 
-run()
+// run()
 
 // ---------------------------
+
+import { taskClean } from './tasks/clean.js'
+
+const taskFiles = () => {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            console.log("taskFiles")
+            resolve()
+        }, 3000)
+    });
+}
+
+const taskWatch = () => {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            console.log("taskWatch")
+            resolve()
+        }, 2000)
+    });
+}
+
+const taskServer = () => {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            console.log("taskServer")
+            resolve()
+        }, 2000)
+    });
+}
+
+const taskInit = async () => {
+    console.log('START')
+    // Ccnsecunses tasks
+    // [clean => [javasctipt[css, html]] => watch => server]
+
+    await taskClean()
+    // await taskFiles()
+    // await taskWatch()
+    // await taskServer()
+
+    console.log('FINISH')
+}
+
+taskInit()

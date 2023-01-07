@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/js/Components/_Default.js"],
-  "sourcesContent": ["const imports = {\"./Components/Component.js\":\"./V3i3D/Component.js\",\"./Components/Component2.js\":\"./V3i3D/Component2.js\"};\n                            // Dynamically imported components\n// This is a common function to import scripts dynamically based on data attrubite\n// Example: <div data-component=\"{{ A component name that matches the component file name from js/Components folder }}\">\n\nconst components = document.querySelectorAll(\"[data-component]\");\nfor (let i = 0; i < components.length; i++) {\n  const el = components[i];\n  const value = el.dataset.component\n  const modules = value.split(\" \").map((item) => item.trim());\n\n  for (let name = 0; name < modules.length; name++) {\n    import(imports[`./Components/${modules[name]}.js`])\n      .then((Module) => {\n        Module.default(el);\n      })\n      .catch((err) => {\n        console.log(err);\n        return false;\n      });\n  }\n}\n                        "],
-  "mappings": ";AAAA,IAAM,UAAU,EAAC,6BAA4B,wBAAuB,8BAA6B,wBAAuB;AAKxH,IAAM,aAAa,SAAS,iBAAiB,kBAAkB;AAC/D,SAAS,IAAI,GAAG,IAAI,WAAW,QAAQ,KAAK;AAC1C,QAAM,KAAK,WAAW;AACtB,QAAM,QAAQ,GAAG,QAAQ;AACzB,QAAM,UAAU,MAAM,MAAM,GAAG,EAAE,IAAI,CAAC,SAAS,KAAK,KAAK,CAAC;AAE1D,WAAS,OAAO,GAAG,OAAO,QAAQ,QAAQ,QAAQ;AAChD,WAAO,QAAQ,gBAAgB,QAAQ,aACpC,KAAK,CAAC,WAAW;AAChB,aAAO,QAAQ,EAAE;AAAA,IACnB,CAAC,EACA,MAAM,CAAC,QAAQ;AACd,cAAQ,IAAI,GAAG;AACf,aAAO;AAAA,IACT,CAAC;AAAA,EACL;AACF;",
-  "names": []
-}
